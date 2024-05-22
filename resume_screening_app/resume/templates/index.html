@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Screening</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://ceriusexecutives.com/wp-content/uploads/2021/11/Screen-Shot-2021-11-12-at-1.29.26-PM.png'); /* Replace 'background-image.jpg' with your actual image file */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: black;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Smart Resume Screening System</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="resume_text">Enter Resume Details:</label>
+                <textarea class="form-control" id="resume_text" name="resume_text" rows="6" placeholder="Enter your resume details here"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
